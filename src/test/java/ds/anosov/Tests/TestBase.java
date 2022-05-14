@@ -33,8 +33,7 @@ public class TestBase {
 
         Configuration.baseUrl = propertyBaseUrl;
         Configuration.browserSize = propertyBrowserSize;
-        //Configuration.remote = fullSelenoidUrl;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = fullSelenoidUrl;
 
         //блок с добавлением видео с прохождением теста в аттачменты
         DesiredCapabilities capabilities = new DesiredCapabilities(); // набор ключей и значений
