@@ -19,7 +19,7 @@ public class TestBase {
         //изучаем библиотеку Owner, передаем эти параметры в Jenkins
        // Configuration.baseUrl = "https://demoqa.com";
        // Configuration.browserSize = "1920x1080";
-       //  Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub"; //эта строчка не позволяет запускать локально в браузере, а выполняет запуск в Selenide
+       //  Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub"; // не позволяет запускать локально в браузере, а выполняет запуск в Selenide
 
         CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class); //создаем экземпляр интерфейса CredentialsConfig
 
@@ -33,7 +33,8 @@ public class TestBase {
 
         Configuration.baseUrl = propertyBaseUrl;
         Configuration.browserSize = propertyBrowserSize;
-        Configuration.remote = fullSelenoidUrl;
+        //Configuration.remote = fullSelenoidUrl;
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         //блок с добавлением видео с прохождением теста в аттачменты
         DesiredCapabilities capabilities = new DesiredCapabilities(); // набор ключей и значений
