@@ -1,5 +1,6 @@
-package ds.anosov;
+package ds.anosov.Tests;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +14,7 @@ public class JenkinsStudyTest extends TestBase {
 
 
     @Test
+    @Owner("Anosov D.")
     @DisplayName("Тест на заполнение тестовой страницы")
     void fillFormTest() {
 
