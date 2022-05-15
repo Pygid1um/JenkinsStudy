@@ -26,16 +26,15 @@ public class TestBase {
         String propertyBaseUrl = System.getProperty("propertyBaseUrl", "https://demoqa.com");
         String propertyBrowserSize = System.getProperty("propertyBrowserSize", "1920x1080");
 
-       // String https = "https://";
+        String https = "https://";
         String login = config.login();
         String password = config.password();
-       // String tailOfUrl = config.testUrl();
-       // String fullSelenoidUrl = format("%s%s%s%s", https, login, password, tailOfUrl);*/
+        String tailOfUrl = config.testUrl();
+        String fullSelenoidUrl = format("%s%s%s%s", https, login, password, tailOfUrl);
 
         Configuration.baseUrl = propertyBaseUrl;
         Configuration.browserSize = propertyBrowserSize;
-        Configuration.remote = "https://"+login+":"+password+"@"+"selenoid.autotests.cloud/wd/hub";
-       // Configuration.remote = fullSelenoidUrl;
+        Configuration.remote = fullSelenoidUrl;
 
         //блок с добавлением видео с прохождением теста в аттачменты
         DesiredCapabilities capabilities = new DesiredCapabilities(); // набор ключей и значений
