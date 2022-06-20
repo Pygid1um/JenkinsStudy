@@ -12,13 +12,12 @@ import static io.qameta.allure.Allure.step;
 
 public class JenkinsStudyTest extends TestBase {
 
-
     @Test
     @Owner("Anosov D.")
     @DisplayName("Тест на заполнение тестовой страницы")
     void fillFormTest() {
 
-        String firstName = "Dmitry";
+        String firstName =  "Dmitry";
         String lastName = "Gromov";
         String email = "gromov@yandex.ru";
         String gender = "Male";
